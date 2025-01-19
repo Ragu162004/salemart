@@ -19,33 +19,7 @@ const SignupForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsLoading(true);
-
-    const enteredEmail = emailInputRef.current.value;
-    const enteredPassword = passwordInputRef.current.value;
-
-    const formData = {
-      email: enteredEmail,
-      password: enteredPassword,
-      returnSecureToken: true,
-    };
-
-    try {
-      const user = await signup(formData).unwrap();
-      if (!user) {
-        throw new Error("Authentication Failed!");
-      }
-      dispatch(login(user.idToken));
-      dispatch(setActiveUser(user.email));
-      history.replace("/");
-      // console.log(user);
-    } catch (error) {
-      const { message } = error.data.error;
-      setErrorMessage(message);
-      console.log(message);
-    }
-    setIsLoading(false);
+    history.push("/");
   };
 
   const content = isLoading ? "Sending Request..." : "Create Account";
