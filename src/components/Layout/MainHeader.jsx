@@ -66,11 +66,6 @@ const MainHeader = () => {
             Agents
           </NavLink>
         </li>
-        <li className="py-3">
-          <NavLink to="/blog" activeClassName="text-blue" onClick={menuHandler}>
-            Blog
-          </NavLink>
-        </li>
       </ul>
       <div className="flex justify-between py-3 pl-6">
         <button
@@ -105,7 +100,7 @@ const MainHeader = () => {
         </div>
         <ul className=" hidden lg:flex px-6 text-ash  ">
           <li>
-            <NavLink to="/home" activeClassName="text-blue" className="px-4">
+            <NavLink to="/" activeClassName="text-blue" className="px-4">
               Home
             </NavLink>
           </li>
@@ -121,11 +116,6 @@ const MainHeader = () => {
           <li>
             <NavLink to="/agent" activeClassName="text-blue" className="px-4">
               Agents
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/blog" activeClassName="text-blue" className="px-4 ">
-              Blog
             </NavLink>
           </li>
         </ul>
